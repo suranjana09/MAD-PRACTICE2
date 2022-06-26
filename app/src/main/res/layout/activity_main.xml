@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_card_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#345EDC">
+
+            <TextView
+                android:id="@+id/text_appointment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Appointment Request"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <ImageView
+                android:id="@+id/image_clock"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_appointment"
+                app:layout_constraintTop_toBottomOf="@+id/text_appointment"/>
+
+              <TextView
+                  android:id="@+id/text_date"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="20dp"
+                  android:text="12 Jan 2020, 8am-10am"
+                  android:textColor="@color/white"
+                  android:textSize="17sp"
+                  app:layout_constraintBottom_toBottomOf="@+id/image_clock"
+                  app:layout_constraintStart_toEndOf="@+id/image_clock"
+                  app:layout_constraintTop_toTopOf="@+id/image_clock"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:src="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_appointment"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:src="@color/purple_200"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:text="Louis Patterson"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/avatar"
+                app:layout_constraintEnd_toStartOf="@+id/info"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toEndOf="@+id/avatar"
+                app:layout_constraintTop_toTopOf="@+id/avatar"/>
+            <ImageView
+                android:id="@+id/info"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="30dp"
+                android:src="@color/purple_200"
+                app:layout_constraintBottom_toBottomOf="@+id/avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/avatar"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/accept"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#FF345EDC"
+                android:text="ACCEPT"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/decline"
+                app:flow_horizontalBias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/avatar"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/decline"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#9E9E9E"
+                android:text="DECLINE"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:flow_horizontalBias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/accept"
+                app:layout_constraintTop_toTopOf="@+id/accept"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
